@@ -1,0 +1,15 @@
+\begin{system}[scale=1.0]
+  % Define a basic floor
+  \floor[id=gnd]{y=-5}
+
+  % Place an incline resting on the floor
+  \incline[id=ramp, angle=30, length=15]{on=gnd.surface}
+
+  % Place a block on the incline at position 8
+  \block[id=m1, width=2, height=2, label_mass=$m$]{on=ramp.surface, position=8}
+
+  % Draw force vectors with labels included
+  \vector[id=fg, length=3, label=$mg$]{connects=m1.center, direction=270}
+
+  \vector[id=fn, length=2.5, label=$F_N$]{connects=m1.top, direction=90, relative_to=ramp.surface}
+\end{system}

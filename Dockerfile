@@ -31,6 +31,9 @@ RUN npm ci --omit=dev
 # Copy the built JS files from the builder stage
 COPY --from=builder /app/dist ./dist
 
+# Copy the documentation folders
+COPY docs ./docs
+
 # Expose the port (Render assigns a dynamic port via process.env.PORT, but it's good practice)
 EXPOSE 3001
 

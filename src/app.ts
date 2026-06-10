@@ -42,7 +42,7 @@ app.post('/api/generate', async (req, res) => {
     }
 
     let docsContent = "";
-    const baseDocsDir = path.join(__dirname, '../../');
+    const baseDocsDir = path.join(__dirname, '../docs');
     
     if (docType === 'detailed') {
       const detailedDir = path.join(baseDocsDir, 'docs_detailed');

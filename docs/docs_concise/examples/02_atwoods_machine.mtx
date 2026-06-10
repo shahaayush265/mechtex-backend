@@ -1,0 +1,23 @@
+\begin{system}[scale=1.0]
+  % Define a ceiling to hang things from
+  \ceiling[id=ceil, width=15]{y=10}
+
+  % Hang a pulley from the ceiling
+  \pulley[id=p1, radius=1.5]{hang=ceil.bottom}
+
+  % Define two masses hanging on either side of the pulley
+  \block[id=m1, width=2, height=2, label_mass=$m_1$]{
+    below=p1.left,
+    distance=4,
+    align_x=p1.left
+  }
+
+  \block[id=m2, width=2.5, height=2.5, label_mass=$m_2$]{
+    below=p1.right,
+    distance=6,
+    align_x=p1.right
+  }
+
+  % Connect the two masses with a string routed over the pulley
+  \string[id=str1]{connects=(m1.top -> over(p1) -> m2.top)}
+\end{system}
