@@ -5,7 +5,10 @@ import dotenv from 'dotenv';
 
 import fs from 'fs';
 import path from 'path';
-dotenv.config({ path: path.join(__dirname, '../.env') });
+try{
+  dotenv.config({ path: path.join(__dirname, '../.env') });
+} catch {}
+
 
 export const app = express();
 app.use(cors());
