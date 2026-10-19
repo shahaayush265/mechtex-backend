@@ -1,17 +1,36 @@
 {
-  "name": "backend",
+  "name": "mechtex-backend",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "AI-powered code generation backend for MechTeX, translating natural language prompts into LaTeX-like mechanical diagram syntax using LLMs.",
+  "main": "dist/server.js",
   "scripts": {
     "build": "tsc",
     "start": "node dist/server.js",
     "dev": "ts-node src/server.ts",
     "test": "jest"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+    "mechtex",
+    "ai-diagrams",
+    "llm",
+    "code-generation",
+    "physics-diagrams",
+    "latex-generator",
+    "express",
+    "typescript",
+    "nvidia-nim",
+    "gemma"
+  ],
+  "author": "Aayush Shah (https://github.com/shahaayush265)",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shahaayush265/mechtex-backend.git"
+  },
+  "homepage": "https://github.com/shahaayush265/mechtex-backend#readme",
+  "bugs": {
+    "url": "https://github.com/shahaayush265/mechtex-backend/issues"
+  },
   "dependencies": {
     "cors": "^2.8.6",
     "dotenv": "^17.4.2",
